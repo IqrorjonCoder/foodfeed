@@ -1,0 +1,22 @@
+.items{
+    width: 220px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    /* background-color: aqua; */
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.main{
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
