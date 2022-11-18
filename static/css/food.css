@@ -1,0 +1,29 @@
+.food{
+    width: 1200px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: aqua; */
+    padding-top: 200px;
+}
+
+.add_to_cart_form{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_to_cart_form button{
+    width: 300px;
+    height: 60px;
+    color: white;
+    background-color: #00a7ff;
+    font-weight: bold;
+    font-size: 19px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
