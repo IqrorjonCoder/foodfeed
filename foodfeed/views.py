@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from . import models
 
 
 def main(request):
-    return render(request, 'main.html')
+    data = {"data": models.animals.objects.all().values('image_1', 'animal_name')}
+    return render(request, 'main.html', context=data)
 
 def card(request):
     return render(request, "card.html")

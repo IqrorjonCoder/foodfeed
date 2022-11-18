@@ -18,41 +18,16 @@
     </nav>
 
     <main class="main container">
-        
-
 
         <div class="pet">
+            {% for i in data %}
+                <a class="animals" href="./{{ i.animal_name }}/">
+                    <p>{{ i.animal_name }}</p>
+                    <img src="../media/{{ i.image_1 }}" alt="dog" style="width: 100px; height:140px;">
+                </a>
 
-            <a class="animals" href="./dog/">
-                <p>Dog</p>
-                <img src="../static/img/dog.png" alt="dog" style="width: 100px; height:110px;">
-            </a>
-        
-            <a class="animals" href="./cat/">
-                <p>Cat</p>
-                <img src="../static/img/dog.png" alt="cat" style="width: 100px; height:110px;">
-            </a>
-        
-            <a class="animals" href="#">
-                <p>Cat</p>
-                <img src="../static/img/dog.png" alt="dog" style="width: 100px; height:110px;">
-            </a>
-        
-            <a class="animals" href="#">
-                <p>Dog</p>
-                <img src="../static/img/dog.png" alt="dog" style="width: 100px; height:110px;">
-            </a>
-        
-            <a class="animals" href="#">
-                <p>Dog</p>
-                <img src="../static/img/dog.png" alt="dog" style="width: 100px; height:110px;">
-            </a>
-        
-            <a class="animals" href="#">
-                <p>Dog</p>
-                <img src="../static/img/dog.png" alt="dog" style="width: 100px; height:110px;">
-            </a>
-        
+            {% endfor %}
+
         </div>
 
         
