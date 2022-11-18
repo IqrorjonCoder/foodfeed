@@ -16,16 +16,20 @@
         </ul>
     </nav>
 
+{#    <h1>{{ the_food }}</h1>#}
+{#    <h1>{{ likee }}</h1>#}
+
     <div class="food container">
 
-        <img src="{% static "img/food1.jpg" %}" alt="food1" style="width: 400px; height: 500px;">
+        <img src="/static/img/{{ the_food.image }}" alt="food1" style="width: 400px; height: 500px;">
 
         <div >
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 300px; color: black; font-size: 24px;">12kg Royal Canin Bulldog Adult</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 24px; color: rgb(255, 99, 125);">500$ / 100gr</p>
+            <p style="font-family: sans-serif; font-weight: bold; max-width: 300px; color: black; font-size: 24px;">
+                {{ the_food.food_name}}</p>
+            <p style="font-family: sans-serif; font-weight: bold; font-size: 24px; color: rgb(255, 99, 125);">{{ the_food.food_price }}</p>
             <p style="max-width: 300px; color: grey; font-size: 24px;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: #00a7ff;">Sold by Premium</span></p>
             <div style="width: 90%; height: 5px; background-color: grey;"></div>
-            <p style="max-width: 400px; color: grey; font-size: 24px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum natus nihil quasi iusto consequuntur voluptatem deserunt eveniet debitis perspiciatis ab velit recusandae quo repellendus illum, minus reiciendis consectetur laudantium? Autem quas illo fugit iure, ipsum odio ex deleniti amet hic?</p>
+            <p style="max-width: 400px; color: grey; font-size: 24px;">{{ the_food.food_description }}</p>
         </div>
 
     </div>
@@ -38,66 +42,19 @@
 
     
         <div class="bestseller container" style="grid-template-columns: auto auto auto auto;">
+            {% for i in likee %}
+                <a href="#" class="bestseller_item">
+                    <img src="/static/img/{{ i.image }}" style="width: 100px; height:110px;">
+                    <p style="color: #00a7ff;">{{ i.food_price.split.2 }}</p>
+                    <p style="color: #005a8a;">{{ i.food_name }}</p>
+                    <p style="color: #9fc41d;">{{ i.food_price.split.0 }}</p>
+                </a>
+            {% endfor %}
 
-            <a href="#" class="bestseller_item">
-                <img src="{% static "img/dog.png" %}" alt="dog ovqat" style="width: 100px; height:110px;">
-                <p style="color: #00a7ff;">200GR</p>
-                <p style="color: #005a8a;">Lorem ipsum dolor .</p>
-                <p style="color: #9fc41d;">20$</p>
-            </a>
-            
-            <a href="#" class="bestseller_item">
-                <img src="{% static "img/dog.png" %}" alt="dog ovqat" style="width: 100px; height:110px;">
-                <p style="color: #00a7ff;">200GR</p>
-                <p style="color: #005a8a;">Lorem ipsum dolor .</p>
-                <p style="color: #9fc41d;">20$</p>
-            </a>
-            
-            <a href="#" class="bestseller_item">
-                <img src="{% static "img/dog.png" %}" alt="dog ovqat" style="width: 100px; height:110px;">
-                <p style="color: #00a7ff;">200GR</p>
-                <p style="color: #005a8a;">Lorem ipsum dolor .</p>
-                <p style="color: #9fc41d;">20$</p>
-            </a>
-            
-            <a href="#" class="bestseller_item">
-                <img src="{% static "img/dog.png" %}" alt="dog ovqat" style="width: 100px; height:110px;">
-                <p style="color: #00a7ff;">200GR</p>
-                <p style="color: #005a8a;">Lorem ipsum dolor .</p>
-                <p style="color: #9fc41d;">20$</p>
-            </a>
-            
-            <a href="#" class="bestseller_item">
-                <img src="{% static "img/dog.png" %}" alt="dog ovqat" style="width: 100px; height:110px;">
-                <p style="color: #00a7ff;">200GR</p>
-                <p style="color: #005a8a;">Lorem ipsum dolor .</p>
-                <p style="color: #9fc41d;">20$</p>
-            </a>
-            
-            <a href="#" class="bestseller_item">
-                <img src="{% static "img/dog.png" %}" alt="dog ovqat" style="width: 100px; height:110px;">
-                <p style="color: #00a7ff;">200GR</p>
-                <p style="color: #005a8a;">Lorem ipsum dolor .</p>
-                <p style="color: #9fc41d;">20$</p>
-            </a>
-            
-            <a href="#" class="bestseller_item">
-                <img src="{% static "img/dog.png" %}" alt="dog ovqat" style="width: 100px; height:110px;">
-                <p style="color: #00a7ff;">200GR</p>
-                <p style="color: #005a8a;">Lorem ipsum dolor .</p>
-                <p style="color: #9fc41d;">20$</p>
-            </a>
-            
-            <a href="#" class="bestseller_item">
-                <img src="{% static "img/dog.png" %}" alt="dog ovqat" style="width: 100px; height:110px;">
-                <p style="color: #00a7ff;">200GR</p>
-                <p style="color: #005a8a;">Lorem ipsum dolor .</p>
-                <p style="color: #9fc41d;">20$</p>
-            </a>
         </div>
 
     <footer class="footer container">
-        <img src="{% static "img/dogs.jpg" %}" alt="footer-image" style="width: 400px; height: 200px; border-radius: 10px;">
+        <img src="{% static "img/images/dog2.jpg" %}" alt="footer-image" style="width: 400px; height: 200px; border-radius: 10px;">
         <p style="display: flex; justify-content: space-around; width: 900px;">
             <a href="#">About us</a>|
             <a href="#">FAQ</a>|

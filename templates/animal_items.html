@@ -18,117 +18,34 @@
         </ul>
     </nav>
 
+{#    <h1>{{ animals }}</h1>#}
+{#    <h1>{{ animal_foods }}</h1>#}
+{#    <h1>{{ animals_items }}</h1>#}
+{#    <h1>{{ animals_item_type }}</h1>#}
+{#    <h1>{{ animal_foods }}</h1>#}
 
     <div style="width: 100%; display: flex; justify-content: center; margin-top: 100px;">
-        <img src="{% static "img/dogs.jpg" %}" alt="dogs" style="margin: 0 auto;">
+        <img src="/static/img/{{ image.image_2 }}" style="margin: 0 auto;">
     </div>
 
 
     <main class="main">
+        {% for i in animal_foods %}
+            <div class="items">
+                <img src="/static/img/{{ i.image }}" style="width: 200px; height: 220px;">
+                <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">{{ i.food_name }}</p>
+                <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">{{ i.food_price }}</p>
+                <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
 
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
+            </div>
+        {% endfor %}
 
-        </div>
-
-        
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-        
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-        
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-
-
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-
-
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
-
-        <div class="items" href="#">
-            <img src="{% static "img/animal_items.jpg" %}" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-
-        </div>
 
     </main>
 
 
     <footer class="footer container">
-        <img src="{% static "img/dogs.jpg" %}" alt="footer-image" style="width: 400px; height: 200px; border-radius: 10px;">
+        <img src="/static/img/images/dog2.jpg" alt="footer-image" style="width: 400px; height: 200px; border-radius: 10px;">
         <p style="display: flex; justify-content: space-around; width: 900px;">
             <a href="#">About us</a>|
             <a href="#">FAQ</a>|

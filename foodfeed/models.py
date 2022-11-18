@@ -28,7 +28,7 @@ class animal_items(models.Model):
 
 class animal_item_types(models.Model):
     connected_to_animal_items = models.ForeignKey(animal_items, on_delete=models.CASCADE, null=True)
-    image = models.ImageField(null=True, upload_to="animal_item_types/")
+    image = models.ImageField(null=True, upload_to="images/")
     type_name = models.CharField(null=True, max_length=20)
 
     class Meta:
@@ -40,7 +40,7 @@ class animal_item_types(models.Model):
 
 class animal_foods(models.Model):
     connected_to_animal_items_types = models.ForeignKey(animal_item_types, on_delete=models.CASCADE, null=True)
-    image = models.ImageField(null=True, upload_to="animal_foods/")
+    image = models.ImageField(null=True, upload_to="images/")
     food_name = models.CharField(null=True, max_length=40)
     food_price = models.CharField(null=True, max_length=20)
     food_description = models.TextField(null=True, max_length=700)

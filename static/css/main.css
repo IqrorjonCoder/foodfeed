@@ -67,7 +67,7 @@ ul {
 
 .bestseller_item {
   width: 200px;
-  height: 200px;
+  height: 250px;
   display: flex;
   text-align: center;
   flex-direction: column;
