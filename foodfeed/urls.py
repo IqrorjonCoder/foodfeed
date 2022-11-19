@@ -5,6 +5,7 @@ from django.conf import settings
 
 
 urlpatterns = [
+    path('api', views.api, name="api page"),
     path('', views.main, name="main page"),
     path('main/', views.main, name="main page"),
     path('card', views.card, name="card page"),

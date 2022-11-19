@@ -1,6 +1,25 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from . import models
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from . import serializer
+
+
+
+@api_view(['GET'])
+def api(request):
+
+    return Response({
+        "animals": serializer.AnimalsSerializer(models.animals.objects.all(), many=True).data,
+        "animal_items": serializer.AnimalitemsSerializer(models.animal_items.objects.all(), many=True).data,
+        "animal_item_types": serializer.AnimalitemtypesSerializer(models.animal_item_types.objects.all(), many=True).data,
+        "animal_foods": serializer.AnimalFoodsSerializer(models.animal_foods.objects.all(), many=True).data,
+    })
+
+
+
+
+
 
 
 def main(request):
