@@ -31,7 +31,12 @@ def main(request):
 
 
 def card(request):
-    return render(request, "card.html")
+    data = {
+        "animal_foods" : models.animal_foods.objects.all().values(),
+    }
+
+    return render(request, "card.html", context=data)
+
 
 
 def animal_name(request, animal_name):

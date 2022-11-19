@@ -18,52 +18,18 @@
         </ul>
     </nav>
 
+{#    <h1>{{ animal_foods }}</h1>#}
+
     <div class="buy_items container">
-        
-        
-        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #00a7ff;">
-            <img src="../static/img/food1.jpg" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px; color: black;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$ / 100gr</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-        </a>
 
-        
-        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #00a7ff;">
-            <img src="../static/img/food1.jpg" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px; color: black;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$ / 100gr</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-        </a>
-        
-        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #00a7ff;">
-            <img src="../static/img/food1.jpg" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px; color: black;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$ / 100gr</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-        </a>
-        
-        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #00a7ff;">
-            <img src="../static/img/food1.jpg" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px; color: black;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$ / 100gr</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-        </a>
-        
-        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #00a7ff;">
-            <img src="../static/img/food1.jpg" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px; color: black;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$ / 100gr</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-        </a>
-        
-        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #00a7ff;">
-            <img src="../static/img/food1.jpg" alt="food-1" style="width: 200px; height: 220px;">
-            <p style="font-family: sans-serif; font-weight: bold; max-width: 170px; color: black;">Lorem ipsum dolor sit amet.</p>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">500$ / 100gr</p>
-            <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
-        </a>
-
+        {% for i in animal_foods %}
+            <a href="#" style="text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #00a7ff;">
+                <img src="../static/img/{{ i.image }}" alt="food-1" style="width: 200px; height: 220px;">
+                <p style="font-family: sans-serif; font-weight: bold; max-width: 170px; color: black;">{{ i.food_name }}</p>
+                <p style="font-family: sans-serif; font-weight: bold; font-size: 20px; color: rgb(255, 99, 125);">{{ i.food_price }}</p>
+                <p style="max-width: 150px; color: grey;">Order delivery approximately between 11am : 4pm tomorrow <span style="color: blue;">Sold by Premium</span></p>
+            </a>
+        {% endfor %}
 
     </div>
     
@@ -76,7 +42,7 @@
 
 
     <footer class="footer container">
-        <img src="{% static "img/dogs.jpg" %}" alt="footer-image" style="width: 400px; height: 200px; border-radius: 10px;">
+        <img src="{% static "/img/images/logo.png" %}" alt="footer-image" style="width: 400px; height: 200px; border-radius: 10px;">
         <p style="display: flex; justify-content: space-around; width: 900px;">
             <a href="#">About us</a>|
             <a href="#">FAQ</a>|
